@@ -1,0 +1,12 @@
+[package]
+name = "url_parser"
+version = "0.1.0"
+edition = "2021"
+description = "URL Parser developed to parse URLs into structured components such as scheme, domain, path, query and fragment."
+
+[dependencies]
+anyhow = "1.0.93"
+clap = "4.5.20"
+pest = "2.7.14"
+pest_derive = "2.7.14"
+thiserror = "2.0.0"
