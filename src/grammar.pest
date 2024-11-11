@@ -1,4 +1,7 @@
 WHITESPACE = _{ " " | "\t" | "\n" }
-url = { scheme ~ "://" ~ domain }
+url = { scheme ~ "://" ~ domain ~ path? ~ query? ~ fragment? }
 scheme = @{ ASCII_ALPHANUMERIC+ }
 domain = @{ (!("/" | "?") ~ ANY)+ }
+path = { "/" ~ (!("?" | "#") ~ ANY)* }
+query = { "?" ~ (!"#" ~ ANY)* }
+fragment = { "#" ~ ANY* }

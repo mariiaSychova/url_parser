@@ -2,7 +2,8 @@
 name = "url_parser"
 version = "0.1.0"
 edition = "2021"
-description = "URL Parser developed to parse URLs into structured components such as scheme, domain, path, query and fragment."
+license = "MIT"
+description = "URL Parser is a Rust parser developed to parse URLs into structured components such as scheme, domain, path, query and fragment."
 
 [dependencies]
 anyhow = "1.0.93"
