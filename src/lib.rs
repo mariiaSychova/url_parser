@@ -7,9 +7,6 @@ use thiserror::Error;
 ///
 /// # Grammar Rules
 ///
-/// - **WHITESPACE**: Matches spaces, tabs and newlines; ignored in parsing.
-///
-/// WHITESPACE = _{ " " | "\t" | "\n" }
 
 /// - **url**: Parses a complete URL structure including scheme, domain, path, query and fragment.
 ///
@@ -78,7 +75,6 @@ impl ParsedURL {
     ///
     /// # Grammar Rules Breakdown
     ///
-    /// - **WHITESPACE**: Matches optional spaces, tabs or newlines; ignored in parsing.
     /// - **url**: The top-level rule, defining the full URL structure:
     ///     - Composed of `scheme`, `domain`, optional `path`, optional `query` and optional `fragment`.
     /// - **scheme**: Matches a sequence of alphanumeric characters, typically representing the protocol (for example, `http`).

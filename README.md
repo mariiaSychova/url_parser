@@ -18,16 +18,6 @@ The parsed components are essential for applications needing to analyze, validat
 
 ### Grammar
 
-### WHITESPACE
-
-```
-WHITESPACE = _{ " " | "\t" | "\n" }
-```
-
-**Purpose**: Defines space characters.
-
-**Explanation**: This rule finds a single space character (" "), tab ("\t") or newline character ("\n"). The underscore indicates that this rule is silent (it does not create any output in the parse tree). This rule is not used directly in URL parsing, but can be useful for ignoring spaces when needed.
-
 ### url
 
 ```
