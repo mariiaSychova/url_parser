@@ -1,6 +1,17 @@
+/// - **url**: Parses a complete URL structure including scheme, domain, path, query and fragment.
 url = { scheme ~ "://" ~ domain ~ path? ~ query? ~ fragment? }
+
+/// - **scheme**: Defines the URL scheme, which consists of alphanumeric characters (for example, `http` or `https`).
 scheme = @{ ASCII_ALPHANUMERIC+ }
+
+/// - **domain**: Parses the domain of the URL, excluding `/` and `?` characters to avoid conflicts with other components.
 domain = @{ (!("/" | "?") ~ ANY)+ }
+
+/// - **path**: Matches the path component, beginning with `/` and excluding `?` and `#` to separate it from query and fragment components.
 path = { "/" ~ (!("?" | "#") ~ ANY)* }
+
+/// - **query**: Parses the query string of a URL, starting with `?` and avoiding the fragment identifier `#`.
 query = { "?" ~ (!"#" ~ ANY)* }
+
+/// - **fragment**: Matches the fragment component of the URL, starting with `#` and containing any characters after it.
 fragment = { "#" ~ ANY* }
