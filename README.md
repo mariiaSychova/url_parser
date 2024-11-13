@@ -1,6 +1,6 @@
 ### URL Parser
 
-Link: https://crates.io/crates/url_parser Docs: https://docs.rs/url_parser/0.1.0/url_parser/
+Link: https://crates.io/crates/url_parser Docs: https://docs.rs/url_parser/0.1.1/url_parser/
 
 URL Parser is a Rust parser developed to parse URLs into structured components such as scheme, domain, path, query and fragment.
 
